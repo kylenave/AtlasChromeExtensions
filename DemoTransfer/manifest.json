@@ -1,0 +1,31 @@
+{
+  "name": "Demo Data Transfer",
+  "description": "Wtf mate?",
+  "version": "2.1",
+  "permissions": [
+    "activeTab",
+	"storage",
+	"contextMenus",
+	"webNavigation",
+	"http://*/",
+    "https://*/"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+	"persistent": true
+  },
+      "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content_script.js"
+            ]
+        }
+    ],
+  "browser_action": {
+    "default_title": "Ahi tuna"
+  },
+  "manifest_version": 2
+}
